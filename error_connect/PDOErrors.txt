@@ -1,0 +1,2 @@
+SQLSTATE[HY000] [1049] Unknown database 'gallery'
+SQLSTATE[HY000] [1049] Unknown database 'gallery'

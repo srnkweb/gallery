@@ -1,0 +1,130 @@
+/*.header {
+     height: 140px;
+     background: #a1a1c4;
+ }
+
+.header h2 {
+    margin: 46px 0 0 0;
+}
+
+.header h2:nth-of-type(1){
+    color: red;
+}
+
+header h1:nth-of-type(1){
+    margin-top: 46px;
+}*/
+body {
+    background-color: #D0DFF2;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.header {
+    background-color: rgba(235, 216, 218, 0.5);
+    height: 113px;
+    border: 4px solid #C9D5EB;
+}
+
+.header .logo  {
+    height: 79px;
+    width: 200px;
+    float: left;
+    background-color: rgba(201, 213, 235, 0.5);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 36px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+    padding-top: 33px;
+}
+
+.header .auth-form {
+    float: right;
+}
+
+.header .auth-form label {
+    width: 68px;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+.header .auth-form input {
+    font-size: 13px;
+    width: 130px;
+    margin-right: 15px;
+}
+.header .auth-form input:nth-of-type(3) {
+    font-size: 20px;
+    height: 38px;
+    width: 90px;
+    margin: 8px 15px 0 0;
+    float: right;
+}
+.header .auth-form input:nth-of-type(4) {
+    width: 15px;
+    margin: 12px 5px 0 0;
+}
+
+main {
+ background-color: rgba(161, 161, 196, 0.160);
+ height: 688px;
+ border: 4px solid #DEDCE7;
+}
+
+main .image-left, main .image-right {
+    font-size: 150px;
+    vertical-align: middle;
+}
+
+main .photo {
+    height: 350px;
+    vertical-align: middle;
+}
+
+main .vision {
+    width: 680px;
+    margin: 0 auto;
+    padding: 175px 0 0;
+}
+
+footer {
+    height: 110px;
+    background-color: #DEDCE7;
+    border: 4px solid #C9D5EB;
+}
+
+p {
+    text-align:center;
+    font-size: 30px;
+    color: #551A8B;
+    font-weight: bolder;
+}
+
+.header .auth-form-reg input:nth-of-type(3) {
+    font-size: 20px;
+    height: 38px;
+    width: 133px;
+    margin: 8px 15px 0 0;
+    float: right;
+}
+
+.header .auth-form-reg input {
+    font-size: 13px;
+    width: 130px;
+    margin-right: 15px;
+}
+
+.header .auth-form-reg {
+    float: right;
+}
+
+.header .auth-form-reg label {
+    width: 68px;
+    display: inline-block;
+    margin-top: 8px;
+}
