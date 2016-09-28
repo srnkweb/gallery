@@ -1,0 +1,19 @@
+{
+    "name": "srnk/gallery.loc",
+    "description": "photo gallery",
+    "type": "project",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "srnkweb",
+            "email": "srnkweb@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "gallery\\": ""
+        }
+    }
+}

@@ -1,5 +1,5 @@
 <?php
-//namespace gallery\core;
+namespace gallery\core;
 
 class view
 {

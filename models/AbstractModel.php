@@ -1,5 +1,5 @@
 <?php
-//namespace gallery\models;
+namespace gallery\models;
 
 abstract class AbstractModel
 {
@@ -12,10 +12,10 @@ abstract class AbstractModel
 		$user = $dbParam['user'];
 		$pass = $dbParam['pass'];
 		try {
-			$dbh = new PDO($dsn, $user, $pass);
-			$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			$dbh = new \PDO($dsn, $user, $pass);
+			$dbh->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 			self::$dbh = $dbh;
-		} catch (PDOException $e) {
+		} catch (\PDOException $e) {
 			file_put_contents(__DIR__ . '/../error_connect/PDOErrors.txt',
 				iconv('windows-1251', 'utf-8', $e->getMessage()) . "\n", FILE_APPEND);
 		}
@@ -37,7 +37,7 @@ abstract class AbstractModel
 			$row = $sth->fetchObject($class);
 			return $row;
 
-		} catch (PDOException $e) {
+		} catch (\PDOException $e) {
 			file_put_contents(__DIR__ . '/../error_connect/QueryErrors.txt',
 				iconv('windows-1251', 'utf-8', $e->getMessage()) . "\n", FILE_APPEND);
 		}
