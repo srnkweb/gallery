@@ -1,8 +1,8 @@
 <?php
-//namespace gallery\core;
-//namespace gallery\controllers;
-require_once __DIR__ . "/../controllers/UserController.php";
-require_once __DIR__ . "/../controllers/ImageController.php";
+namespace gallery\core;
+use gallery\controllers;
+//require_once __DIR__ . "/../controllers/UserController.php";
+//require_once __DIR__ . "/../controllers/ImageController.php";
 
 class Route
 {
@@ -33,7 +33,10 @@ class Route
 	{
 		foreach($res as $ctrl => $act){
 			$controllerClassName = $ctrl . 'Controller';
-			require_once __DIR__ . '/../controllers/' . $controllerClassName . '.php';
+			//var_dump($controllerClassName);
+			//die;
+			//$controllerClassName = 'tchaikovsky\controllers\\' . $ctrl . 'Controller';
+			$controllerClassName = 'gallery\controllers\\'.$controllerClassName;
 			$controller = new $controllerClassName;
 			$method = 'action' . $act;
 			$data[] = $controller->$method();

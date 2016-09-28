@@ -1,8 +1,9 @@
 <?php
-//namespace gallery\controllers;
-require_once __DIR__ . "/../models/Images.php";
-require_once __DIR__ . "/../core/view.php";
-require_once __DIR__ . "/../core/route.php";
+namespace gallery\controllers;
+use gallery\models\Images;
+//require_once __DIR__ . "/../models/Images.php";
+//require_once __DIR__ . "/../core/view.php";
+//require_once __DIR__ . "/../core/route.php";
 
 class ImageController
 {

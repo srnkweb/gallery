@@ -1,5 +1,5 @@
 <?php
-//namespace gallery\models;
+namespace gallery\models;
 
 class users
 {
