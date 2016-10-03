@@ -1,11 +1,9 @@
 <?php
 namespace gallery\core;
 use gallery\controllers;
-//require_once __DIR__ . "/../controllers/UserController.php";
-//require_once __DIR__ . "/../controllers/ImageController.php";
 
 class Route
-{
+{	
 	public static function start()
 	{
 		$ctrl[] = isset($_GET['headctrl']) ? $_GET['headctrl'] : 'User';
