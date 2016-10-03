@@ -11,7 +11,6 @@ class Images
 		$binParam = [':img' => $_GET['img']];
 		$class = __CLASS__;
 		$dbh = new core\DB();
-		$dbh->connectDB();
 		return $dbh->query($sql, $class, $binParam);
 	}
 }
