@@ -1,8 +1,7 @@
 <?php
 namespace gallery\models;
 use gallery\core;
-//require_once __DIR__ . "/../core/DB.php";
-//require_once __DIR__ . "/AbstractModel.php";
+
 
 class Images
 {
