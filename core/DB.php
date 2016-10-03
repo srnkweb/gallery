@@ -1,8 +1,8 @@
 <?php
-
+namespace gallery\core;
 class DB
 {
-	private $dbh;
+	protected $dbh;
 
 	public function connectDB()
 	{
@@ -11,10 +11,10 @@ class DB
 		$user = $dbParam['user'];
 		$pass = $dbParam['pass'];
 		try {
-			$dbh = new PDO($dsn, $user, $pass);
-			$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			$dbh = new \PDO($dsn, $user, $pass);
+			$dbh->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 			$this->dbh = $dbh;
-		} catch (PDOException $e) {
+		} catch (\PDOException $e) {
 			file_put_contents(__DIR__ . '/../error_connect/PDOErrors.txt',
 				iconv('windows-1251', 'utf-8', $e->getMessage()) . "\n", FILE_APPEND);
 		}
@@ -36,7 +36,7 @@ class DB
 			$row = $sth->fetchObject($class);
 			return $row;
 
-		} catch (PDOException $e) {
+		} catch (\PDOException $e) {
 			file_put_contents(__DIR__ . '/../error_connect/QueryErrors.txt',
 				iconv('windows-1251', 'utf-8', $e->getMessage()) . "\n", FILE_APPEND);
 		}
