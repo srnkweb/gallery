@@ -7,11 +7,9 @@ class DB
 	public function connectDB()
 	{
 		$dbParam = require __DIR__ . '/../config/DbConnect.php';
-		$dsn = "mysql:host={$dbParam['host']};dbname={$dbParam['dbname']}";
-		$user = $dbParam['user'];
-		$pass = $dbParam['pass'];
 		try {
-			$dbh = new \PDO($dsn, $user, $pass);
+			$dbh = new \PDO("mysql:host={$dbParam['host']};dbname={$dbParam['dbname']}",
+							$dbParam['user'], $dbParam['pass']);
 			$dbh->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 			$this->dbh = $dbh;
 		} catch (\PDOException $e) {
@@ -24,15 +22,7 @@ class DB
 	{
 		try {
 			$sth = $this->dbh->prepare($sql);
-			if (isset($binParam[0])) {
-				foreach ($binParam as $item) {
-					foreach ($item as $key => $value) {
-						$sth->bindParam($key, $value);
-					}
-				}
-			}
-
-			$sth->execute();
+			$sth->execute($binParam);
 			$row = $sth->fetchObject($class);
 			return $row;
 

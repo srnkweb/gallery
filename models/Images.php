@@ -9,7 +9,7 @@ class Images
 	public static function getImagesById()
 	{
 		$sql = "SELECT id, url, alt  FROM images WHERE id=:img";
-		$binParam = [[':img' => $_GET['img']]];
+		$binParam = [':img' => $_GET['img']];
 		$class = __CLASS__;
 		$dbh = new core\DB();
 		$dbh->connectDB();
