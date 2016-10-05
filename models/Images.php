@@ -10,7 +10,7 @@ class Images
 		$sql = "SELECT id, url, alt  FROM images WHERE id=:img";
 		$binParam = [':img' => $_GET['img']];
 		$class = __CLASS__;
-		$dbh = new core\DB();
+		$dbh = core\DB::instance();
 		return $dbh->query($sql, $class, $binParam);
 	}
 }
