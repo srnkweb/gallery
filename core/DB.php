@@ -1,10 +1,13 @@
 <?php
 namespace gallery\core;
+use gallery\traits\Singleton;
+
 class DB
 {
+	use Singleton;
 	protected $dbh;
 
-	public function __construct()
+	protected function __construct()
 	{
 		$dbParam = require __DIR__ . '/../config/DbConnect.php';
 		try {
