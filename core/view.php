@@ -14,14 +14,11 @@ class view
 			// преобразуем элементы массива в переменные
 
 		}*/
+		$result = view::objectToArray($data);
 
-
-
-			$regFormView = $data[0];
-			$image = $data[1];
-			$gallery = $content_view;
-
-
+		$regFormView = 'authentication.php';
+		$image = $result;
+		$gallery = $content_view;
 
 		/*
 		динамически подключаем общий шаблон (вид),
@@ -31,6 +28,16 @@ class view
 		include __DIR__ . "/../template/$template_view";
 	}
 
+	protected static function objectToArray($data)
+	{
+		if (is_array($data) || is_object($data)){
+			foreach($data as $key => $value){
+				$result[$key] = $value;
+			}
+			return $result;
+		}
+		return $data;
+	}
 }
 
 
