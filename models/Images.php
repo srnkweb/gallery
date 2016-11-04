@@ -13,5 +13,15 @@ class Images
 		$dbh = core\DB::instance();
 		return $dbh->query($sql, $class, $binParam);
 	}
+
+	public static function pagination()
+	{
+
+	}
+
+	public static function maxLimit()
+	{
+		
+	}
 }
 
