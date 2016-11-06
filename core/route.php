@@ -6,8 +6,8 @@ class Route
 	public static function start()
 
 	{
-		$ctrl = 'Image';
-		$act = "Default";
+		$ctrl = $_GET['ctrl'] ?  : 'Image';
+		$act = $_GET['act'] ?  : 'One';
 //		$url = $_SERVER['REQUEST_URI'];
 //		$urlValue = explode('?', $url);
 //		$urlValue = explode('&', $urlValue[1]);
@@ -18,7 +18,7 @@ class Route
 		$controller = new $controllerClassName;
 		$method = 'action' . $act;
 		$data = $controller->$method();
-
+		
 		$view = new view();
 		$view->generate('gallery.php', 'template.php', $data);
 	}

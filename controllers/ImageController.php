@@ -1,41 +1,25 @@
 <?php
 namespace gallery\controllers;
 use gallery\models\Images;
+use gallery\classes;
 
 
 class ImageController
 {
 
-	public function actionPrev()
+	public function actionOne()
 	{
-		if ($_GET['img'] <= 1 ){
-			$_GET['img'] = 1;
-		}
-		return self::takeImages();
+		//$act = 'deflt';
+		classes\paginator::pagination();
+		$obg = new classes\paginator();
+		$data[] = $obg ->requirePointer($obg);
+		return $data = self::takeImages($data);
 	}
 
-	public function actionNext()
+	private static function takeImages($data)
 	{
 
-		if ($_GET['img'] >= 2){
-			$_GET['img'] = 2;
-		}
-		return self::takeImages();
-	}
-
-	public function actionDefault()
-	{
-		if ($_GET['img'] <= 0){
-			++$_GET['img'];
-		}
-		return self::takeImages();
-	}
-
-	private static function takeImages()
-	{
-		return  Images::getImagesById();
-//		$view = new view();
-//		$view->generate('gallery.php', 'template.php', $data);
-
+		$data[1] =  Images::getImagesById();
+		return $data;
 	}
 }
