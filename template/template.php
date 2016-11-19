@@ -3,13 +3,13 @@
 <head>
 	<meta charset="utf-8">
 	<title>Gallery</title>
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="/css/normalize.css">
+	<link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 <div class="wrapper">
 	<header class="header">
-		<a class="logo" href="/index.php">gallery</a>
+		<a class="logo" href="/">gallery</a>
 		<?php
 		{
 			include __DIR__ . "/$regFormView";

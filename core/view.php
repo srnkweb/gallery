@@ -11,7 +11,6 @@ class view
 	{
 		$paginator = $data[0];
 		$image = $data[1];
-
 		$paginator = classes\TransformObj::objectToArrayKeyValue($data[0]);
 		$image = classes\TransformObj::objectToArrayKeyValue($data[1]);
 

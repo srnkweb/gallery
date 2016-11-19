@@ -4,7 +4,7 @@ namespace gallery\classes;
 use gallery\core;
 
 
-class paginator
+class Paginator
 {
     public $left;
     public $right;
@@ -32,6 +32,9 @@ class paginator
 
     public static function scrollLimit($minLimit, $maxLimit)
     {
+        if (!isset($_GET['img'])){
+            $_GET['img'] = 1;
+        }
         if ($_GET['img'] <= $minLimit) {
             $_GET['img'] = $minLimit;
             return;

@@ -12,15 +12,14 @@ class TransformObj
             }
             return $result;
         }
-        return $data;
     }
     
     public static function objectToArrayValue($data)
     {
         foreach ($data as $value)
         {
-          $res = $value;   
+          $result = $value;   
         }
-        return $res;
+        return $result;
     }
 }
